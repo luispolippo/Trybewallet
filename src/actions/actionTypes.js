@@ -1,0 +1,8 @@
+export const SET_USER = 'SET_USER';
+export const ADD_EXPENSES = 'ADD_EXPENSES';
+export const REQUEST_SUCESS = 'REQUEST_SUCESS';
+export const REQUEST_BEGIN = 'REQUEST_BEGIN';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const SUBMIT_EDIT = 'SUBMIT_EDIT';
+export const ADD_CURRENCIES = 'ADD_CURRENCIES';
