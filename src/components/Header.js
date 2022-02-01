@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import HeaderCSS from '../styles/Header.module.css';
 
 class Header extends Component {
   constructor() {
@@ -32,14 +33,15 @@ class Header extends Component {
     const { email } = this.props;
     const totalValue = this.convertAndSumExpends();
     return (
-      <header>
-        <div>
+      <header className={ HeaderCSS.header }>
+        <div className={ HeaderCSS.titleContainer }>
+          <h2>Trybewallet</h2>
+        </div>
+        <div className={ HeaderCSS.infoContainer }>
           <p>
             Email:
             <span data-testid="email-field">{email}</span>
           </p>
-        </div>
-        <div>
           <p>
             Despesa Total:
             <span data-testid="total-field">{totalValue}</span>

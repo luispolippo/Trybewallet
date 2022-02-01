@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actionDeleteExpense, actionEditExpense } from '../actions';
 import TableButtons from './TableButtons';
+import TableCSS from '../styles/Table.module.css';
 
 class Table extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Table extends Component {
   render() {
     const { expenses, removeExpense, editExpense } = this.props;
     return (
-      <section>
+      <section className={ TableCSS.section }>
         <table>
           <thead>
             <tr>

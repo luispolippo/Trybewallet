@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import FormCSS from '../styles/ExpendForm.module.css';
 
 class Select extends Component {
   render() {
     const { method, tag, handleChange, currency, currencyCoins } = this.props;
     return (
-      <div>
+      <div className={ FormCSS.selectContainer }>
         <label htmlFor="currency">
           Moeda:
           <select

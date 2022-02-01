@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import FormCSS from '../styles/ExpendForm.module.css';
 
 class Input extends Component {
   render() {
     const { handleChange, value, description } = this.props;
     return (
-      <div>
+      <div className={ FormCSS.inputsContainer }>
         <input
           type="text"
           value={ value }

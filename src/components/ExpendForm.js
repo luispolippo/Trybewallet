@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Input from './Input';
 import { actionAddExpenses, actionFetchCurrency } from '../actions';
 import Select from './Select';
+import FormCSS from '../styles/ExpendForm.module.css';
 
 class ExpendForm extends Component {
   constructor() {
@@ -49,7 +50,7 @@ class ExpendForm extends Component {
     const { isLoading } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
-      <section>
+      <section className={ FormCSS.section }>
         {isLoading && (<h1>Loading...</h1>)}
         <h3>Adição de despesas</h3>
         <Input

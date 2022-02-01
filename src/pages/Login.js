@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { actionSetUser } from '../actions';
+import LoginCSS from '../styles/Login.module.css';
 
 class Login extends React.Component {
   constructor() {
@@ -46,31 +47,35 @@ class Login extends React.Component {
   render() {
     const { isDisable, email, password } = this.state;
     return (
-      <div>
-        <input
-          type="text"
-          data-testid="email-input"
-          placeholder="email"
-          name="email"
-          value={ email }
-          onChange={ this.handleOnChange }
-        />
-        <input
-          type="text"
-          data-testid="password-input"
-          placeholder="senha"
-          name="password"
-          value={ password }
-          onChange={ this.handleOnChange }
-        />
-        <button
-          type="button"
-          disabled={ isDisable }
-          onClick={ this.handleOnClick }
-        >
-          Entrar
-        </button>
-      </div>
+      <main className={ LoginCSS.main }>
+        <h1>Trybewallet</h1>
+        <div className={ LoginCSS.cardLogin }>
+          <h2>Login</h2>
+          <input
+            type="text"
+            data-testid="email-input"
+            placeholder="Email"
+            name="email"
+            value={ email }
+            onChange={ this.handleOnChange }
+          />
+          <input
+            type="text"
+            data-testid="password-input"
+            placeholder="Senha"
+            name="password"
+            value={ password }
+            onChange={ this.handleOnChange }
+          />
+          <button
+            type="button"
+            disabled={ isDisable }
+            onClick={ this.handleOnClick }
+          >
+            Entrar
+          </button>
+        </div>
+      </main>
     );
   }
 }

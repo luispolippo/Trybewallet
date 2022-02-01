@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { actionSubmitEdit } from '../actions';
 import Input from './Input';
 import Select from './Select';
+import FormCSS from '../styles/ExpendForm.module.css';
 
 class EditExpendForm extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class EditExpendForm extends Component {
   render() {
     const { value, description, method, tag, currency } = this.state;
     return (
-      <section>
+      <section className={ FormCSS.section }>
         <h3>Edição de despesas</h3>
         <Input
           handleChange={ this.handleOnChange }

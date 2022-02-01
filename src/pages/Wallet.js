@@ -6,6 +6,7 @@ import ExpendForm from '../components/ExpendForm';
 import Table from '../components/Table';
 import EditExpendForm from '../components/EditExpendForm';
 import { actionAddCurrencies, actionFetchCurrency } from '../actions';
+import WalletCSS from '../styles/Login.module.css';
 
 class Wallet extends React.Component {
   async componentDidMount() {
@@ -24,7 +25,7 @@ class Wallet extends React.Component {
   render() {
     const { isEditing } = this.props;
     return (
-      <main>
+      <main className={ WalletCSS.main }>
         <Header />
         {
           isEditing ? <EditExpendForm /> : <ExpendForm />
